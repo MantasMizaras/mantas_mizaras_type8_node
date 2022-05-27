@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const mysql = require('mysql2/promise');
 const { dbConfig } = require('../config');
 
@@ -15,7 +16,7 @@ async function executeDb(sql, dataToDbArr) {
   }
 }
 
-function getBillsByGroupId(group_id) {
+function showBillsByGroupId(group_id) {
   const sql = 'SELECT * FROM bills WHERE group_id = ?';
   return executeDb(sql, [group_id]);
 }
@@ -25,4 +26,4 @@ function addBillToSpecificGroup(group_id, amount, description) {
   return executeDb(sql, [group_id, amount, description]);
 }
 
-module.exports = { getBillsByGroupId, addBillToSpecificGroup };
+module.exports = { showBillsByGroupId, addBillToSpecificGroup };

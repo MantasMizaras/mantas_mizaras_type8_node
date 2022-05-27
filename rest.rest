@@ -4,8 +4,8 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-"full_name": "Dzimbo",
-"email": "labas@krabas.lt",
+"full_name": "Spygom",
+"email": "laikom@spygas.lt",
 "password": "secret123"
 }
 
@@ -14,7 +14,7 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-"email": "labas@krabas.lt",
+"email": "laikom@spygas.lt",
 "password": "secret123"
 }
 
@@ -22,30 +22,30 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/accounts
 Content-Type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYyNzkwNSwiZXhwIjoxNjUzNjM4NzA1fQ.N86hSN0rusSSINBjgqHwM3x1148V95qsByppRQgeWF4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 {
-"group_id": 1
+"group_id": 2
 }
 
 ###
 GET http://localhost:3000/accounts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 ### BILLS ###
 ###
-GET http://localhost:3000/bills/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+GET http://localhost:3000/bills/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 ###
 POST http://localhost:3000/bills
 Content-Type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 {
-    "group_id": 1,
-     "amount": 50,
-     "description": "alelis"
+    "group_id": 3,
+     "amount": 80,
+     "description": "whiskey"
 }
 
 
