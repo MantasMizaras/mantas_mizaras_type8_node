@@ -1,33 +1,10 @@
 const express = require('express');
 const { validateToken } = require('../middleware');
-const { assignGroup, getAllUserGroups } = require('../model/accountModel');
 
 const accountRoute = express.Router();
+const controller = require('../controllers/accountController');
 
-accountRoute.post('/accounts', validateToken, async (req, res) => {
-  // eslint-disable-next-line camelcase
-  const { group_id } = req.body;
-  const idfromToken = req.userId;
-  try {
-    const data = await assignGroup(group_id, idfromToken);
-    if (data.affectedRows === 1) {
-      res.status(201).json('Account sekmingai pridetas');
-      return;
-    }
-    res.status(400).json('Naujas account nesukurtas');
-  } catch (error) {
-    res.status(500).json('Something went wrong');
-  }
-});
-
-accountRoute.get('/accounts', validateToken, async (req, res) => {
-  const idfromToken = req.userId;
-  try {
-    const data = await getAllUserGroups(idfromToken);
-    res.json(data);
-  } catch (error) {
-    res.status(500).json('Something went wrong');
-  }
-});
+accountRoute.post('/accounts', validateToken, controller.postAccount);
+accountRoute.get('/accounts', validateToken, controller.showAllConnectedUserGroups);
 
 module.exports = { accountRoute };
