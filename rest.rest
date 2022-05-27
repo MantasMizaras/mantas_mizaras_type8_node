@@ -1,6 +1,4 @@
-###
-GET http://localhost:3000/users
-
+### USERS ###
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
@@ -20,6 +18,7 @@ Content-Type: application/json
 "password": "secret123"
 }
 
+### ACCOUNTS ###
 ###
 POST http://localhost:3000/accounts
 Content-Type: application/json 
@@ -32,5 +31,21 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
 ###
 GET http://localhost:3000/accounts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+
+### BILLS ###
+###
+GET http://localhost:3000/bills/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+
+###
+POST http://localhost:3000/bills
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+
+{
+    "group_id": 1,
+     "amount": 50,
+     "description": "alelis"
+}
 
 

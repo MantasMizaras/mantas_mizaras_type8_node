@@ -4,6 +4,7 @@ const cors = require('cors');
 const { PORT } = require('./config');
 const userRoute = require('./routes/userRoutes');
 const { accountRoute } = require('./routes/accountRoutes');
+const billRoute = require('./routes/billRoutes');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/', userRoute);
 app.use('/', accountRoute);
+app.use('/', billRoute);
 
 // 404 route
 app.all('*', (req, res) => {
