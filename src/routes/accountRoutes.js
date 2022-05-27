@@ -5,6 +5,7 @@ const { assignGroup, getAllUserGroups } = require('../model/accountModel');
 const accountRoute = express.Router();
 
 accountRoute.post('/accounts', validateToken, async (req, res) => {
+  // eslint-disable-next-line camelcase
   const { group_id } = req.body;
   const idfromToken = req.userId;
   try {
@@ -22,8 +23,8 @@ accountRoute.post('/accounts', validateToken, async (req, res) => {
 accountRoute.get('/accounts', validateToken, async (req, res) => {
   const idfromToken = req.userId;
   try {
-    const accountGroupArr = await getAllUserGroups(idfromToken);
-    res.json(accountGroupArr);
+    const data = await getAllUserGroups(idfromToken);
+    res.json(data);
   } catch (error) {
     res.status(500).json('Something went wrong');
   }
