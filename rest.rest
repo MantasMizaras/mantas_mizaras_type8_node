@@ -19,3 +19,18 @@ Content-Type: application/json
 "email": "labas@krabas.lt",
 "password": "secret123"
 }
+
+###
+POST http://localhost:3000/accounts
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYyNzkwNSwiZXhwIjoxNjUzNjM4NzA1fQ.N86hSN0rusSSINBjgqHwM3x1148V95qsByppRQgeWF4
+
+{
+"group_id": 1
+}
+
+###
+GET http://localhost:3000/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzYzODczOSwiZXhwIjoxNjUzNjQ5NTM5fQ.K9v2qDwiY44NqbQGXlQUi5mSGe9TzrtyIyce4Ajl9J8
+
+
