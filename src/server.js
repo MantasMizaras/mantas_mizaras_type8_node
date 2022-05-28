@@ -5,12 +5,14 @@ const { PORT } = require('./config');
 const userRoute = require('./routes/userRoutes');
 const { accountRoute } = require('./routes/accountRoutes');
 const billRoute = require('./routes/billRoutes');
+const { showBody } = require('./middleware');
 
 const app = express();
 
 // MiddleWare
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(showBody);
 app.use(cors());
 
 app.get('/', (req, res) => {
@@ -18,9 +20,9 @@ app.get('/', (req, res) => {
 });
 
 // Routes
-app.use('/', userRoute);
-app.use('/', accountRoute);
-app.use('/', billRoute);
+app.use('/api', userRoute);
+app.use('/api', accountRoute);
+app.use('/api', billRoute);
 
 // 404 route
 app.all('*', (req, res) => {

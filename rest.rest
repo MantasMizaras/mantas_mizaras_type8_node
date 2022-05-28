@@ -1,6 +1,6 @@
 ### USERS ###
 ###
-POST http://localhost:3000/register
+POST http://localhost:3000/api/register
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/login
+POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 ### ACCOUNTS ###
 ###
-POST http://localhost:3000/accounts
+POST http://localhost:3000/api/accounts
 Content-Type: application/json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
@@ -29,23 +29,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
 }
 
 ###
-GET http://localhost:3000/accounts
+GET http://localhost:3000/api/accounts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 ### BILLS ###
 ###
-GET http://localhost:3000/bills/3
+GET http://localhost:3000/api/bills/3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 ###
-POST http://localhost:3000/bills
+POST http://localhost:3000/api/bills
 Content-Type: application/json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzY2MzkwNiwiZXhwIjoxNjUzNjc0NzA2fQ.sE1MlZ7OWhW6Q_c5_hSrwkCjuys1r3cq6QYHETqeWUs
 
 {
-    "group_id": 3,
-     "amount": 80,
-     "description": "whiskey"
+    "group_id": 2,
+     "amount": 300,
+     "description": "b*tches"
 }
 
 
