@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <script type="module" src="./js/login.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <nav class="main-nav">
+          <a href="./register.html" class="nav-link">Register</a>
+          <a href="./login.html" class="nav-link active">Login</a>
+          <a href="./groups.html" class="nav-link">Groups</a>
+          <a href="./bills.html" class="nav-link">Bills</a>
+        </nav>
+      </header>
+      <main class="content">
+        <div class="logo-container">
+          <img class="logo" src="./img/logo.png" alt="google_logo" />
+          <h1 class="logo-title">Split bill</h1>
+          <p class="logo-subtitle">BEST IN MARKET</p>
+        </div>
+        <form class="form login-form">
+          <h3>Login</h3>
+          <h3 id="err"></h3>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <p class="error-msg"></p>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <p class="error-msg"></p>
+          <p class="success-msg"></p>
+          <button class="submit-button" type="submit">Login</button> <br />
+          <a class="go-login" href="./register.html">Don't have an account? Register</a>
+        </form>
+      </main>
+    </div>
+    <footer class="footer">Copyright &copy; 2022</footer>
+  </body>
+</html>
