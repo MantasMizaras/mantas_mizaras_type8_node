@@ -6,6 +6,7 @@ const userRoute = require('./routes/userRoutes');
 const { accountRoute } = require('./routes/accountRoutes');
 const billRoute = require('./routes/billRoutes');
 const { showBody } = require('./middleware');
+const groupRoute = require('./routes/groupRoutes');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 app.use('/api', userRoute);
 app.use('/api', accountRoute);
 app.use('/api', billRoute);
+app.use('/api', groupRoute);
 
 // 404 route
 app.all('*', (req, res) => {

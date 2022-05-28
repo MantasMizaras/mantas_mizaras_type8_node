@@ -48,4 +48,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
      "description": "b*tches"
 }
 
+### GROUPS ###
+###
+GET http://localhost:3000/api/groups
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY1Mzc0MjAyMywiZXhwIjoxNjUzNzUyODIzfQ.tj1iIfPK6XTmhYZhrcVDxegokR84QYqKRs6jrM4J5Iw
+
+###
+POST http://localhost:3000/api/groups
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY1Mzc0MjAyMywiZXhwIjoxNjUzNzUyODIzfQ.tj1iIfPK6XTmhYZhrcVDxegokR84QYqKRs6jrM4J5Iw
+
+{
+    "name": "Dovana Albertui"
+}
+
+
+
 
