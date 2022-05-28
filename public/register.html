@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register page</title>
+    <script type="module" src="./js/register.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <nav class="main-nav">
+          <a href="./register.html" class="nav-link active">Register</a>
+          <a href="./login.html" class="nav-link">Login</a>
+          <a href="./groups.html" class="nav-link">Groups</a>
+          <a href="./bills.html" class="nav-link">Bills</a>
+        </nav>
+      </header>
+      <main class="content">
+        <div class="logo-container">
+          <img class="logo" src="./img/logo.png" alt="logo" />
+          <h1 class="logo-title">Split bill</h1>
+          <p class="logo-subtitle">BEST IN MARKET</p>
+        </div>
+        <form class="form register-form">
+          <h3>Register</h3>
+          <h3 id="err"></h3>
+          <label class="label" for="full_name">Full name</label>
+          <input type="text" name="full_name" id="full_name" />
+          <p class="error-msg"></p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <p class="error-msg"></p>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <p class="error-msg"></p>
+          <label for="repeat_password">Repeat password</label>
+          <input type="password" name="repeat_password" id="repeat_password" /> <br />
+          <p class="error-msg"></p>
+          <p class="success-msg"></p>
+          <button class="submit-button" type="submit">Register</button> <br />
+          <a class="go-login" href="./login.html">Or perhaps, just login?</a>
+        </form>
+      </main>
+      <footer class="footer">Copyright &copy; 2022</footer>
+    </div>
+  </body>
+</html>
