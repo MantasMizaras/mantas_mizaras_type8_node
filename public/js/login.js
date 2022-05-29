@@ -35,10 +35,10 @@ formEl.addEventListener('submit', async (e) => {
 
   if (dataInJs.success === true) {
     errorMsgEl.textContent = '';
-    successMsg('Okey!');
+    successMsg('Login succesfull!');
     const { token } = dataInJs;
     localStorage.setItem('articleUserToken', token);
-    // window.location.href = 'groups.html';
+    window.location.href = 'groups.html';
     clearErrors();
   } else {
     errorMsgEl.textContent = '';

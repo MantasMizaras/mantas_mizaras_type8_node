@@ -26,4 +26,9 @@ function getAllUserGroups(id) {
   return executeDb(sql, [id]);
 }
 
-module.exports = { assignGroup, getAllUserGroups };
+function findGroupByUserId(user_id) {
+  const sql = 'SELECT * FROM accounts WHERE user_id = ?';
+  return executeDb(sql, [user_id]);
+}
+
+module.exports = { assignGroup, getAllUserGroups, findGroupByUserId };

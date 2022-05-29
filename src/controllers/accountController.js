@@ -1,9 +1,16 @@
-const { assignGroup, getAllUserGroups } = require('../model/accountModel');
+const { assignGroup, getAllUserGroups, findGroupByUserId } = require('../model/accountModel');
 
 const postAccount = async (req, res) => {
   // eslint-disable-next-line camelcase
   const { group_id } = req.body;
   const idfromToken = req.userId;
+
+  const foundAccount = await findGroupByUserId(idfromToken);
+  if (foundAccount) {
+    res.status(400).json('You are already member of this account from before');
+    return;
+  }
+
   try {
     const data = await assignGroup(group_id, idfromToken);
     if (data.affectedRows === 1) {

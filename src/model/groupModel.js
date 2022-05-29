@@ -25,4 +25,9 @@ function createNewGroup(name) {
   return executeDb(sql, [name]);
 }
 
-module.exports = { getGroups, createNewGroup };
+function findGroupByName(name) {
+  const sql = 'SELECT * FROM groups WHERE name = ?';
+  return executeDb(sql, [name]);
+}
+
+module.exports = { getGroups, createNewGroup, findGroupByName };
