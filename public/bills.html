@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bills page</title>
+    <script type="module" src="./js/bills.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <nav class="main-nav">
+          <a href="./register.html" class="nav-link">Register</a>
+          <a href="./login.html" class="nav-link">Login</a>
+          <a href="./groups.html" class="nav-link">Groups</a>
+          <a href="./bills.html" class="nav-link active">Bills</a>
+        </nav>
+      </header>
+      <main class="content">
+        <div class="logo-container">
+          <img class="logo" src="./img/logo.png" alt="logo" />
+          <h1 class="logo-title">Split bill</h1>
+          <p class="logo-subtitle">BEST IN MARKET</p>
+        </div>
+        <div class="bills-table-container">
+          <table class="bills-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody class="bills-table-body">
+              <!-- <tr>
+                <td>1</td>
+                <td>Bike Rental</td>
+                <td>$20</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Trip to nowhere</td>
+                <td>€200</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Pool Bar</td>
+                <td>€200</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Salad bar</td>
+                <td>€200</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <form class="form add-bill-form">
+          <h3>Add bill</h3>
+          <label for="amount">Amount: </label>
+          <input type="number" name="amount" id="amount" step="0.01" />
+          <p class="error-msg"></p>
+          <label for="description">Description: </label>
+          <input type="description" name="description" id="Description" />
+          <p class="error-msg"></p>
+          <p class="success-msg"></p>
+          <button class="submit-button" type="submit">Add</button>
+        </form>
+      </main>
+    </div>
+    <footer class="footer">Copyright &copy; 2022</footer>
+  </body>
+</html>
