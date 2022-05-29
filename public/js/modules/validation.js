@@ -35,6 +35,13 @@ export function checkInput(valueToCheck, field, rulesArr) {
       }
     }
 
+    if (rule === 'positive') {
+      if (valueToCheck < 0) {
+        addError('must be positive', field);
+        return;
+      }
+    }
+
     if (rule.split('-')[0] === 'minLength') {
       const min = rule.split('-')[1];
       checkMinLength(valueToCheck, min, field);

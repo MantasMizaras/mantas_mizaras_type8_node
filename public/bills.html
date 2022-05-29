@@ -22,7 +22,10 @@
         <div class="logo-container">
           <img class="logo" src="./img/logo.png" alt="logo" />
           <h1 class="logo-title">Split bill</h1>
-          <p class="logo-subtitle">BEST IN MARKET</p>
+        </div>
+        <div class="page-title-output">
+          <h2 class="bills-title"></h2>
+          <h3 class="bills-subtitle">Group's bills:</h3>
         </div>
         <div class="bills-table-container">
           <table class="bills-table">
@@ -33,28 +36,7 @@
                 <th>Amount</th>
               </tr>
             </thead>
-            <tbody class="bills-table-body">
-              <!-- <tr>
-                <td>1</td>
-                <td>Bike Rental</td>
-                <td>$20</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Trip to nowhere</td>
-                <td>€200</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Pool Bar</td>
-                <td>€200</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Salad bar</td>
-                <td>€200</td>
-              </tr> -->
-            </tbody>
+            <tbody class="bills-table-body"></tbody>
           </table>
         </div>
         <form class="form add-bill-form">
@@ -63,7 +45,7 @@
           <input type="number" name="amount" id="amount" step="0.01" />
           <p class="error-msg"></p>
           <label for="description">Description: </label>
-          <input type="description" name="description" id="Description" />
+          <input type="text" name="description" id="description" />
           <p class="error-msg"></p>
           <p class="success-msg"></p>
           <button class="submit-button" type="submit">Add</button>

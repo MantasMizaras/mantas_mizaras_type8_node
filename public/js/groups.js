@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000/api';
+import { BASE_URL } from './modules/fetch.js';
+
 const token = localStorage.getItem('groupUserToken');
 const cardContainerEl = document.querySelector('.group-container');
 
@@ -11,6 +12,7 @@ function makeEl(tagName, text, elClass, dest) {
 }
 
 function renderGroups(arr, dest) {
+  // eslint-disable-next-line no-param-reassign
   dest.innerHTML = '';
   arr.forEach((cObj) => {
     const groupArticleEl = makeEl('article', '', 'card-group', dest);
@@ -22,6 +24,7 @@ function renderGroups(arr, dest) {
   });
 }
 
+// eslint-disable-next-line no-shadow
 async function getAccounts(token) {
   try {
     const resp = await fetch(`${BASE_URL}/accounts`, {
