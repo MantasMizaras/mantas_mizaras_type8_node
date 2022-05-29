@@ -14,7 +14,7 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-"email": "labas@krabas.lt",
+"email": "laikom@spygas.lt",
 "password": "secret123"
 }
 
@@ -22,10 +22,10 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/api/accounts
 Content-Type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzgyNzc3MywiZXhwIjoxNjUzODM4NTczfQ.6qwMhCXgoTiUroIhUhLVnd9-9bm87q9uHEHhZUsMYI4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY1Mzg1NjE4OCwiZXhwIjoxNjUzODY2OTg4fQ.ZJrrSP1pWyc6fd4vqAq990rQA2c8nayYGE908t9fP9Y
 
 {
-"group_id": 2
+"group_id": 3
 }
 
 ###
@@ -43,9 +43,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzgyMzU0NiwiZXhwIjoxNjUzODM0MzQ2fQ.sdndDKdG5hp7prsay35PDd6sdvL74yAvFfIjg9tYSAQ
 
 {
-    "group_id": 2,
-     "amount": 300,
-     "description": "b*tches"
+    "group_id": 3,
+     "amount": 500,
+     "description": "dinner"
 }
 
 ### GROUPS ###
@@ -56,8 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
 ###
 POST http://localhost:3000/api/groups
 Content-Type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MzgyMzU0NiwiZXhwIjoxNjUzODM0MzQ2fQ.sdndDKdG5hp7prsay35PDd6sdvL74yAvFfIjg9tYSAQ
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY1Mzg1NjE4OCwiZXhwIjoxNjUzODY2OTg4fQ.ZJrrSP1pWyc6fd4vqAq990rQA2c8nayYGE908t9fP9Y
 {
     "name": "Dovana Albertui"
 }

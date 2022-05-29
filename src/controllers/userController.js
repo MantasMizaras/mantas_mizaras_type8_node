@@ -7,9 +7,15 @@ const userRegistration = async (req, res) => {
   try {
     const gautasEmail = req.body.email;
     // eslint-disable-next-line camelcase
-    const { full_name, password } = req.body;
+    const gautasVardas = req.body.full_name;
+    const { password } = req.body;
     const plainTextPassword = password;
     const hashedPassword = bcrypt.hashSync(plainTextPassword, 10);
+
+    if (gautasVardas.split(' ').length > 1 !== true) {
+      res.status(400).json('Please enter full name');
+      return;
+    }
 
     const foundUser = await findUserByEmail(gautasEmail);
     if (foundUser) {
@@ -19,7 +25,7 @@ const userRegistration = async (req, res) => {
 
     const newUser = {
       // eslint-disable-next-line camelcase
-      full_name,
+      full_name: gautasVardas,
       email: gautasEmail,
       password: hashedPassword,
     };

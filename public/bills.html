@@ -27,29 +27,31 @@
           <h2 class="bills-title"></h2>
           <h3 class="bills-subtitle">Group's bills:</h3>
         </div>
-        <div class="bills-table-container">
-          <table class="bills-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Description</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody class="bills-table-body"></tbody>
-          </table>
+        <div class="bills-container">
+          <div class="bills-table-container">
+            <table class="bills-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody class="bills-table-body"></tbody>
+            </table>
+          </div>
+          <form class="form add-bill-form">
+            <h3>Add bill</h3>
+            <label for="amount">Amount: </label>
+            <input type="number" name="amount" id="amount" step="0.01" />
+            <p class="error-msg"></p>
+            <label for="description">Description: </label>
+            <input type="text" name="description" id="description" />
+            <p class="error-msg"></p>
+            <p class="success-msg"></p>
+            <button class="submit-button" type="submit">Add</button>
+          </form>
         </div>
-        <form class="form add-bill-form">
-          <h3>Add bill</h3>
-          <label for="amount">Amount: </label>
-          <input type="number" name="amount" id="amount" step="0.01" />
-          <p class="error-msg"></p>
-          <label for="description">Description: </label>
-          <input type="text" name="description" id="description" />
-          <p class="error-msg"></p>
-          <p class="success-msg"></p>
-          <button class="submit-button" type="submit">Add</button>
-        </form>
       </main>
     </div>
     <footer class="footer">Copyright &copy; 2022</footer>
